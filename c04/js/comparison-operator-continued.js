@@ -8,4 +8,11 @@ var comparison = (score1 + score2) > (highScore1 + highScore2);
 
 // Write the message into the page
 var el = document.getElementById('answer');
-el.innerHTML = 'New high score: ' + comparison;
+el.innerHTML = '<p>New high score: ' + comparison + '</p>';
+el.setAttribute('class', 'testing');
+
+var secondEl = document.createElement('section');
+secondEl.id = 'testing';
+secondEl.setAttribute('class', 'testing1');
+secondEl.innerHTML = 'Testing out the innerHTML';
+el.appendChild(secondEl);
